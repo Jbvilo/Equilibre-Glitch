@@ -1,0 +1,82 @@
+.card{
+  width:300px;
+  height:360px;
+  display: inline-block;
+  background-color:#3476b8;
+
+}
+
+.carddiv{
+  display: inline-block;
+  margin-left: 3%;
+
+}
+#searchtitre{
+display: inline-block;
+font-size: 20px;
+margin-top:2%;
+}
+
+#ooo{
+
+  display: inline-block;
+}
+.carddivpo{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 18px;
+
+}
+
+#butdiv{
+  margin-top : -1.8%;
+  margin-left : 1%;
+  display:inline-block;
+  display:flex;
+  justify-content:center;
+}
+
+#img2{
+  position: absolute;
+height: 60px;
+display:inline-block;
+vertical-align: middle;
+right:10px;
+top:10px;
+cursor: pointer;
+}
+
+.block5{
+  display:flex;
+  justify-content:center;
+
+ 
+
+}
+#titrecard {
+display:flex;
+justify-content:center;
+color:white;
+}
+#buttoncard {
+  display:flex;
+  justify-content:center;
+  margin-top : 10%;
+  }
+
+  #cardcontent{
+
+    margin-left:5%;
+  }
+  #titrecardiv{
+
+    height:20%;
+  }
+  .block{
+  margin-left:2%;
+    display:inline-block;
+  
+  }
+  #img2:hover{
+  
+    opacity : 0.5;
+}

@@ -1,0 +1,166 @@
+<div class="block">
+    
+
+
+
+         <span id="searchtitre">Moniteur :</span>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+     <dx-text-box placeholder="Nom ou prénom" [height]="40" [width]="150"  id="ooo" (onKeyUp)="search($event)" >
+    </dx-text-box>
+    &nbsp;&nbsp;
+    <span id="searchtitre">Niveau du Galop :</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+        <dx-text-box  [height]="40" [width]="50"  id="ooo" (onKeyUp)="search($event)" placeholder="0 à 7">
+       </dx-text-box>
+       &nbsp;&nbsp;
+       <span id="searchtitre">Date :</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;
+           <dx-text-box placeholder="YYYY-DD-JJ" [height]="40" [width]="100"  id="ooo" (onKeyUp)="search($event)" >
+          </dx-text-box>
+</div>
+
+
+<div id="butdiv">
+    <dx-button text="Mes reprises"  [width]="200" [visible]="role" >
+    </dx-button>
+
+    &nbsp;  &nbsp;  &nbsp;
+    <dx-button text="Toutes les reprises"  [width]="200"  [visible]="role">
+    </dx-button>
+</div>
+
+
+
+<img *ngIf="btn_visible()" id="img2" (click)="myFunction()" src="assets/plus.png" />
+<br><br>
+
+
+<div *ngFor="let lesson of lessonslist" class="carddiv">
+    <div class="dx-card card">
+        <div id="titrecardiv">
+            <h2 id="titrecard">{{lesson.titre}}</h2>
+        </div>
+        
+        <div id="cardcontent">
+
+         
+            <span class="carddivpo" id="test">Date du cours :{{lesson.date}}</span>
+            <br>
+            <span class="carddivpo">Moniteur : {{lesson.moniteur}}</span>
+            <br>
+            <span class="carddivpo" >Niveau de Galop: {{lesson.level}}</span>
+            <br>
+            <span class="carddivpo">Heure de début :{{lesson.startTime}}H</span>
+            <br>
+            <span class="carddivpo">Heure de fin : {{lesson.endTime}}H</span>
+            <br>
+            <span class="carddivpo">Nombre d'éleves max: {{lesson.nbreleve}}</span>
+            <br>
+            <span class="carddivpo">Nombre de places restantes: {{lesson.nbreleve}}</span>
+        </div>
+
+
+        <div id="buttoncard">
+            <dx-button text="Cheval" [width]="120" [visible]="buttoncava"></dx-button>
+            &nbsp; &nbsp;
+            <dx-button text="S'inscrire" [width]="120" id="inscript" (onClick)="inscript(lesson)"  [visible]="buttoncava"></dx-button>
+            <dx-button text="Eleves inscrits" [width]="160" id="inscript" (onClick)="show(lesson)" [visible]="buttonadmin"></dx-button>
+            <dx-button text="Eleves" [width]="120" id="inscript" (onClick)="show(lesson)" [visible]="buttonmonit"></dx-button>
+            &nbsp; &nbsp;
+            <dx-button text="Supprimer" [width]="120" id="inscript" (onClick)="deletelesson(lesson.student)" [visible]="buttonmonit"></dx-button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<dx-popup [width]="500" [height]="600" title="Liste des élèves inscrits" [showTitle]="true" [closeOnOutsideClick]="true"
+    [(visible)]="popupVisible2">
+
+    <div *ngFor="let student of studentlist2">
+        <p>{{student}}</p>
+    </div>
+
+
+        </dx-popup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dx-popup [width]="800" [height]="600" title="Ajouter une reprise" [showTitle]="true" [closeOnOutsideClick]="true"
+    [(visible)]="popupVisible">
+
+
+    <div class="form">
+
+        <div class="dx-fieldset">
+            <div class="dx-fieldset-header"></div>
+            <div class="dx-field">
+                <div class="dx-field-label">Titre</div>
+                <dx-text-box class="dx-field-value" value="Balade" id="titre" placeholder="">
+                </dx-text-box>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">Niveau :</div>
+                <dx-text-box class="dx-field-value" value="7" id="level" placeholder="Niveau de Galop du cours (1 à 7)">
+                </dx-text-box>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">Date :</div>
+                <dx-text-box class="dx-field-value" value="2005-10-05" id="date" placeholder="YYYY-MM-DD">
+                </dx-text-box>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">Heure de début :</div>
+                <dx-text-box class="dx-field-value" value="8" id="start" placeholder="Entier de 0 à 24">
+                </dx-text-box>
+            </div>
+
+            <div class="dx-field">
+                <div class="dx-field-label">Durée :</div>
+                <dx-text-box class="dx-field-value" value="2" id="duree" placeholder="Heure de fin ne peut excéder 00h">
+                </dx-text-box>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Nombre d'élèves maximum  :</div>
+                <dx-text-box class="dx-field-value" value="2" id="elevemax" placeholder="Entre 0 et 100">
+                </dx-text-box>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="block5">
+        <dx-button text="ajouter" [width]="120" (onClick)="submit()"></dx-button>
+    </div>
+
+
+</dx-popup>

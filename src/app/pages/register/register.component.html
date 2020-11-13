@@ -1,0 +1,78 @@
+<div class="contnt">
+  <div>
+    <span id="connexion" (click)="Flytologgin()">Se connecter</span>
+    &nbsp;
+    <span>|</span>
+    &nbsp;
+    <span id="inscription">S'inscrire</span>
+  </div>
+
+  <div id="divtitre">
+    <span id="titre">Equilibre</span>
+    <br><br>
+
+  
+ <span> Application web réalisée avec Angular et Spring Boot permettant </span><br><span> la gestion des membres et le planning d'un centre équestre</span>
+  </div>
+
+  <div class="dx-card responsive-paddings">
+
+    <div class="form">
+
+      <div class="dx-fieldset">
+        <div class="dx-fieldset-header"></div>
+        <div class="dx-field">
+          <div class="dx-field-label">Nom</div>
+          <dx-text-box class="dx-field-value" id="name" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+        <div class="dx-field">
+          <div class="dx-field-label">Prénom</div>
+          <dx-text-box class="dx-field-value" id="surname" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+        <div class="dx-field">
+          <div class="dx-field-label">Adresse email</div>
+          <dx-text-box class="dx-field-value" id="mail" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+        <div class="dx-field">
+          <div class="dx-field-label">Numéro de téléphone</div>
+          <dx-text-box class="dx-field-value"  id="phone" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+
+        <div class="dx-field">
+          <div class="dx-field-label">Numéro de licence</div>
+          <dx-text-box class="dx-field-value"  id="licence" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+        <div class="dx-field">
+          <div class="dx-field-label">Mot de passe </div>
+          <dx-text-box class="dx-field-value"  id="pass" mode="password" (onKeyUp)=getformstate()>
+          </dx-text-box>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="button">
+      <dx-button id="buttonsub" [width]="140" text="S'inscrire" (onClick)="Onsubmit()"></dx-button>
+    </div>
+    <br>
+
+  </div>
+
+</div>

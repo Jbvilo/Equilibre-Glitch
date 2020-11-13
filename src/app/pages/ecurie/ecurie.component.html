@@ -1,0 +1,64 @@
+<div class="block">
+    <dx-text-box placeholder="Rechercher un cheval par son nom" [height]="40" [width]="300" (onKeyUp)="search($event)">
+    </dx-text-box> 
+  </div>
+
+  <img *ngIf="btn_visible()" id="img2" (click)="myFunction()" src="assets/plus.png"/>
+
+
+
+<div class="horslist">
+  <div  *ngFor="let horse of horseslist" class="carddiv">
+  <div class="dx-card card">
+    <div class="block4">
+   &nbsp; <span class="cardtext" id="horsiname">{{horse.firstName}}</span> 
+    <br>
+     &nbsp; <span class="cardtext" >Date de naissance : {{horse.birthdate}}</span>
+    
+  </div>
+  <div id="img2div">
+    <img id="img3" src="assets/horse.png"/>
+ </div>
+  </div>
+
+</div>
+</div>
+
+
+
+  
+<dx-popup
+[width]="800"
+[height]="500"
+title="Ajouter un cheval"
+[showTitle]="true"
+[closeOnOutsideClick]="true"
+[(visible)]="popupVisible">
+
+<div class="form">
+
+  <div class="dx-fieldset">
+    <div class="dx-fieldset-header"></div>
+    <div class="dx-field">
+      <div class="dx-field-label">Nom</div>
+      <dx-text-box class="dx-field-value" value="" id="horsename">
+      </dx-text-box>
+    </div>
+
+    <div class="dx-field">
+      <div class="dx-field-label">Date de naissance</div>
+      <dx-text-box class="dx-field-value" value="" id="birth" placeholder="YYYY-MM-DD">
+      </dx-text-box>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="block5">
+ <dx-button  text="ajouter" [width]="120" (onClick)="addhorse()"></dx-button>
+</div>
+
+
+
+</dx-popup>

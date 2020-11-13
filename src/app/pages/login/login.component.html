@@ -1,0 +1,51 @@
+<div class="contnt">
+<div>
+<span id="connexion">Se connecter</span>
+&nbsp;
+<span>|</span>
+&nbsp;
+<span id="inscription" (click)="Onsubmit()" >S'inscrire</span>
+</div>
+
+<div id="divtitre"> 
+    <span id="titre">Equilibre</span>
+    <br><br>
+
+ <span> Application web réalisée avec Angular et Spring Boot permettant </span><br><span> la gestion des membres et le planning d'un centre équestre</span>
+</div>
+
+ <div class="dx-card responsive-paddings">    
+    <div class="form">
+
+        <div class="dx-fieldset"  >
+     
+          <div class="dx-field">
+            <div class="dx-field-label">Email ou numéro de téléphone :</div>
+      <dx-text-box class="dx-field-value"  id="mail" value="jbvilo@hotmail.com">
+            </dx-text-box>
+          </div>
+      
+          <div class="dx-field">
+            <div class="dx-field-label" >Mot de passe :</div>
+            <dx-text-box class="dx-field-value" id="password"  mode="password" value="password">
+            </dx-text-box>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+   
+<div id="button"> 
+      <dx-button  id="but" type="success" [width]="140"  text="Se connecter" (onClick)="connex()"></dx-button>
+    </div>
+    <br>
+    <div id="forgot" (click)="forgot()">
+      <span>Mot de passe oublié</span>
+    </div>
+ </div>
+
+</div>

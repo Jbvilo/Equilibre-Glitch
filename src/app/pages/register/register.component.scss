@@ -1,0 +1,49 @@
+
+#divtitre
+{
+margin-top: 10%;
+margin-left:5%;
+display: inline-block;
+vertical-align: top;
+}
+.dx-card{
+    height:60%;
+    width:45%;
+    margin-top: 11%;
+    display:inline-block;
+    vertical-align: top; 
+    margin-left:15%;
+    box-shadow:0.5px 0.5px 5px rgb(187, 184, 184);
+}
+#button{
+    display:flex;
+    justify-content:center;
+
+    margin-top:10%;
+}
+
+#buttonsub{
+    //remettre id au bouton 
+    background-color: #EEEDED; 
+    color:#d4d1d1 ;
+}
+#titre{
+font-size: 450%;
+    color:#75A938;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#connexion:hover{
+    cursor: pointer;
+    color: #75A938;
+}
+
+#inscription{
+
+    color: #75A938;
+}
+.contnt{
+    width: 2000px;
+height: 100%;
+    background-image: url("/assets/oki2.jpg");
+background-size: auto;
+}

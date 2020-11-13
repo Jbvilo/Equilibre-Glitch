@@ -1,0 +1,74 @@
+.card{
+    width:350px;
+    height:100px;
+    margin-left:1%;
+    margin-top:5%;
+    background-color:#9bd9ee;
+}
+.card:hover{
+    opacity: 0.5;
+   cursor: pointer;
+    }
+#horsiname{
+color:white;
+font-size: 18px;;
+}
+
+.block4{
+   
+    display:inline-block;
+    width: 75%;
+    vertical-align: middle;
+    margin-left:2%;
+    
+    
+}
+.dx-icon-card{
+    color:white;
+}
+
+#img3{
+    height:60px;
+    
+}
+
+#img2{
+    position: absolute;
+  height: 60px;
+  display:inline-block;
+  vertical-align: middle;
+  right:10px;
+  top:10px;
+  cursor: pointer;
+}
+
+#img2:hover{
+  
+    opacity : 0.5;
+}
+#img2div{
+    display:inline-block;
+    vertical-align: middle;
+    margin-top: 5%;
+}
+.block{
+    display:inline-block;
+    vertical-align: middle;
+    left:10px;
+    top:10px;
+    position: absolute;
+}
+.block5{
+    display:flex;
+    justify-content:center;
+    margin-top: 15%;
+   
+ 
+}
+.carddiv{
+    display:inline-block;
+    margin-left:1%;
+}
+.horslist{
+    margin-top:7%;
+}

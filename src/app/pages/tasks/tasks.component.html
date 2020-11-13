@@ -1,0 +1,122 @@
+<div class="block">
+  <dx-text-box placeholder="Rechercher un utilisateur" [height]="40" [width]="240"  id="ooo" (onKeyUp)="search($event)">
+  </dx-text-box>
+</div>
+
+
+<div class="block2">
+
+  <dx-button id="but1" text="Admin" class="button" (onClick)="buttonstate($event)">
+  </dx-button>
+  <dx-button  id="but2" text="Moniteur"  class="button" (onClick)="buttonstate($event)">
+  </dx-button>
+  <dx-button id="but3" text="Cavalier" class="button" (onClick)="buttonstate($event)">
+  </dx-button>
+
+</div>
+
+<div class="block3">
+<img id="img" (click)="myFunction()" src="assets/add-friend.png"/>
+
+</div>
+
+
+<br><br><br>
+
+
+<div id="cardcontent">
+ <div *ngFor="let person of titlesList" class="infocard">
+  <div class="dx-card card">
+    <div class="block4">
+    <i class="dx-icon-card"></i> &nbsp; <span id="nom">{{person.firstName}}</span> &nbsp; <span id="nom">{{person.lastName}}</span>
+    <br>
+    <i class="dx-icon-email"></i> &nbsp; <span>{{person.email}}</span>
+    <br>
+    <i class="dx-icon-tel"></i> &nbsp; <span>{{person.phonenumber}}</span>
+    <br>
+    <i class="dx-icon-doesnotcontain"></i> &nbsp; <span>{{person.licencenumber}}</span>
+    <br>
+    <i class="dx-icon-doesnotcontain"></i> &nbsp; <span>{{person.role}}</span>
+  </div>
+  <div id="img2div">
+    <img id="img2" src="assets/user.png"/>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<dx-popup
+[width]="800"
+[height]="570"
+[title]=popuptitre
+[showTitle]="true"
+[closeOnOutsideClick]="true"
+[(visible)]="popupVisible">
+
+
+<div class="form">
+
+  <div class="dx-fieldset">
+    <div class="dx-fieldset-header"></div>
+    <div class="dx-field">
+      <div class="dx-field-label">Nom</div>
+      <dx-text-box class="dx-field-value" id="name">
+      </dx-text-box>
+    </div>
+
+    <div class="dx-field">
+      <div class="dx-field-label">Prénom</div>
+      <dx-text-box class="dx-field-value" value="" id="surname">
+      </dx-text-box>
+    </div>
+
+    <div class="dx-field">
+      <div class="dx-field-label">Adresse email</div>
+      <dx-text-box class="dx-field-value" value="" id="mail">
+        <dx-validator>
+          <dxi-validation-rule 
+              type="email" 
+              message="Entrez un email valide">
+          </dxi-validation-rule>
+      </dx-validator>
+      </dx-text-box>
+    </div>
+
+    <div class="dx-field">
+      <div class="dx-field-label">Numéro de téléphone</div>
+      <dx-text-box class="dx-field-value" value="" id="phone">
+      </dx-text-box>
+    </div>
+
+    
+    <div class="dx-field">
+      <div class="dx-field-label">Numéro de licence </div>
+      <dx-text-box class="dx-field-value"  value="" id="licence">
+      </dx-text-box>
+    </div>
+
+    <div class="dx-field">
+      <div class="dx-field-label">Mot de passe </div>
+      <dx-text-box class="dx-field-value" value=""  mode="password" id="pass">
+      </dx-text-box>
+    </div>
+
+
+
+    <div class="block5">
+      <dx-button text="ajouter" [width]="120" (onClick)="Onsubmit()" [disabled]="false"></dx-button>
+     </div>
+     
+  </div>
+</div>
+
+
+
+
+
+</dx-popup>
+

@@ -1,0 +1,70 @@
+<header>
+  <dx-toolbar class="header-toolbar">
+    <dxi-item
+      *ngIf="menuToggleEnabled"
+      location="before"
+      widget="dxButton"
+      cssClass="menu-button"
+      [options]="{
+        icon: 'menu',
+        stylingMode: 'text',
+        onClick: toggleMenu
+      }">
+    </dxi-item>
+    <dxi-item
+      location="before"
+      cssClass="header-title"
+      *ngIf="title"
+      [text]="title">
+    </dxi-item>
+
+    <dxi-item
+    location="center"
+    text="EQUILIBRE"
+    
+    >
+
+   <!--<img id="im" src="assets/horse.png"/>-->
+    
+  </dxi-item>
+
+  <dxi-item
+  location="center"
+  >  
+  <div>
+  
+</div>
+</dxi-item>
+
+
+  <dxi-item
+  location="center"
+  >
+ <img id="im" src="assets/horse.png"/>
+  
+</dxi-item>
+
+
+  <dxi-item
+  location="after"
+  [text]="username"
+  >
+  <span >{{username}} |</span>
+</dxi-item>
+
+<dxi-item
+
+location="after"
+[text]="status"
+>
+<span id="status">{{status}}</span>
+
+</dxi-item>
+
+
+
+  </dx-toolbar>
+
+
+
+</header>

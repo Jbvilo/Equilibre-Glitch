@@ -1,0 +1,82 @@
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+
+  
+
+
+
+#divtitre
+{
+margin-top: 10%;
+margin-left:5%;
+display: inline-block;
+vertical-align: top;
+}
+.dx-card{
+    height:40%;
+width:45%;
+    margin-top: 11%;
+    display:inline-block;
+    vertical-align: top; 
+    margin-left:15%;
+    box-shadow:0.5px 0.5px 5px rgb(187, 184, 184);
+  
+}
+#button{
+    display:flex;
+    justify-content:center;
+
+    margin-top:10%;
+}
+#forgot{
+    display:flex;
+    margin-left:80%;
+    cursor: pointer;
+}
+#forgot:hover{
+    color:#75A938;
+}
+#bu{
+    //remettre id au bouton 
+    background-color: rgb(255, 153, 0);
+    color: white;
+}
+#titre{
+font-size: 450%;
+    color:#75A938;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#connexion{
+    color: #75A938;
+    cursor: pointer;
+
+}
+#inscription:hover{
+    color:#75A938;
+    cursor: pointer;
+
+}
+.contnt{
+    width: 2000px;
+height: 100%;
+    background-image: url("/assets/oki2.jpg");
+
+}
+   
+
+

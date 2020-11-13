@@ -1,0 +1,78 @@
+<div class="dx-card">
+
+  <div class="form">
+
+    <div class="dx-fieldset">
+      <div class="dx-fieldset-header"></div>
+      <div class="dx-field">
+        <div class="dx-field-label">Nom</div>
+        <dx-text-box class="dx-field-value" [showClearButton]="true" id="nom">
+        </dx-text-box>
+      </div>
+
+      <div class="dx-field">
+        <div class="dx-field-label">Prénom</div>
+        <dx-text-box class="dx-field-value" value="" id="prenom">
+        </dx-text-box>
+      </div>
+
+      <div class="dx-field">
+        <div class="dx-field-label">Adresse email</div>
+        <dx-text-box class="dx-field-value" value=""  id="mail" [readOnly]="true">
+        </dx-text-box>
+      </div>
+
+      <div class="dx-field">
+        <div class="dx-field-label">Numéro de téléphone</div>
+        <dx-text-box class="dx-field-value" value="" id="phone">
+        </dx-text-box>
+      </div>
+
+      
+      <div class="dx-field">
+        <div class="dx-field-label">Numéro de licence</div>
+        <dx-text-box class="dx-field-value" value="" id="licence">
+        </dx-text-box>
+      </div>
+
+
+      <div class="dx-field">
+        <div class="dx-field-label">Statut</div>
+        <dx-text-box class="dx-field-value" value="" id="statuss" [readOnly]="true">
+        </dx-text-box>
+      </div>
+
+      <div class="dx-field">
+        <div class="dx-field-label">Mot de passe </div>
+        <dx-text-box class="dx-field-value"   mode="password" id="pass">
+        </dx-text-box>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="button">
+   <dx-button text="Mettre à jour " [width]="160" (onClick)="update()"></dx-button>
+  </div>
+
+
+</div>
+
+
+<dx-load-panel
+    #loadPanel
+    shadingColor="rgba(0,0,0,0.4)"
+    [(visible)]="loadingVisible"
+    [showIndicator]="true"
+    [showPane]="true"
+    [shading]="true"
+    [closeOnOutsideClick]="false"
+    (onShown)="onShown()"
+    (onHidden)="onHidden()">
+</dx-load-panel>
+
+<div class="button2">
+  <dx-button text="Supprimer mon compte"  (onClick)="showLoadPanel()" >
+  </dx-button>
+</div>
