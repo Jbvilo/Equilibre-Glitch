@@ -20,10 +20,10 @@ const express = require('express');
 
 const app = express();
 
-app.use(express.static('./dist/equilibre'));
+app.use(express.static('./dist/Equilibre'));
 
 app.get('/*', function (req, res) {
-  res.sendFile('index.html', { root: 'dist/equilibre' }
+  res.sendFile('index.html', { root: 'dist/Equilibre' }
   );
 });
 
